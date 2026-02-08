@@ -1,0 +1,24 @@
+# Solo i file multimediali usati dal sito vengono tracciati.
+# Esclusi: tutto il resto in Immagini/ e Video/Fra Piano.mp4
+
+# Immagini: ignora tutto, poi riammetti solo i file usati dal sito
+Immagini/*
+!Immagini/SANTODICE Album.png
+!Immagini/Video Live.mp4
+!Immagini/Live 1.jpg
+!Immagini/Live 2.jpg
+!Immagini/Live 3.jpg
+!Immagini/Live 4.jpg
+!Immagini/MainPhoto.jpg
+!Immagini/Studio 1.JPG
+!Immagini/Studio 4.JPG
+
+# Video: solo Fra Piano 2.mp4 è usato (hero)
+Video/Fra Piano.mp4
+
+# OS e editor
+.DS_Store
+Thumbs.db
+*.log
+.cursor/
+.vscode/

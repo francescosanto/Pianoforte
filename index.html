@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="es" id="htmlLang">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="docTitle">Francesco Santo | Pianista para restaurantes, hoteles y eventos</title>
+    <meta name="description" id="metaDescription" content="Francesco Santo - Pianista profesional para restaurantes de lujo, hoteles, eventos privados y corporativos. Piano solo, grupos, improvisación.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">FS</a>
+            <ul class="nav-links">
+                <li><a href="#chi-sono" data-i18n="nav_chi_sono">Quién soy</a></li>
+                <li><a href="#repertoire" data-i18n="nav_repertoire">Repertorio</a></li>
+                <li><a href="#services" data-i18n="nav_services">Servicios</a></li>
+                <li><a href="#projects" data-i18n="nav_projects">Proyectos</a></li>
+                <li><a href="#gallery" data-i18n="nav_gallery">Galería</a></li>
+                <li><a href="#contact" data-i18n="nav_contact">Contacto</a></li>
+            </ul>
+            <div class="lang-switcher" role="group" aria-label="Selección de idioma" data-i18n-aria="lang_switcher_aria">
+                <button type="button" class="lang-btn active" data-lang="es" title="Español" aria-label="Español">
+                    <img src="Bandiere/Bandiera spagna.png" alt="Español" width="28" height="21" class="lang-flag">
+                </button>
+                <button type="button" class="lang-btn" data-lang="en" title="English" aria-label="English">
+                    <img src="Bandiere/Bandiera UK.png" alt="English" width="28" height="21" class="lang-flag">
+                </button>
+                <button type="button" class="lang-btn" data-lang="it" title="Italiano" aria-label="Italiano">
+                    <img src="Bandiere/Bandiera Italia.webp" alt="Italiano" width="28" height="21" class="lang-flag">
+                </button>
+            </div>
+            <button class="nav-toggle" aria-label="Menu" data-i18n-aria="aria_menu" id="navToggleBtn">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="hero">
+        <video class="hero-video-bg" src="Video/Fra Piano 2.mp4" autoplay muted loop playsinline preload="auto" id="heroVideo"></video>
+        <div class="hero-overlay"></div>
+        <button type="button" class="hero-audio-hint" id="heroAudioHint" data-i18n="hero_audio_hint" data-i18n-aria="hero_audio_hint" aria-label="Haz clic para activar el audio">Clicca per attivare l'audio</button>
+        <div class="hero-content">
+            <div class="hero-title-wrap">
+                <h1 class="hero-title">Francesco<br>Santo</h1>
+                <div class="hero-divider"></div>
+                <p class="hero-subtitle" data-i18n="hero_subtitle">Tu evento. Mi piano. El ambiente perfecto.</p>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span data-i18n="hero_scroll">Scroll</span>
+            <div class="hero-scroll-line"></div>
+        </div>
+    </header>
+
+    <!-- Video Section (nascosta) -->
+    <section class="section video-section section-hidden" id="video">
+        <div class="section-header">
+            <h2 class="section-title" data-i18n="section_performance">PERFORMANCE</h2>
+        </div>
+        <div class="video-container">
+            <video 
+                class="main-video" 
+                autoplay 
+                muted 
+                loop 
+                playsinline
+                poster="assets/video-poster.jpg"
+            >
+                <source src="assets/demo-video.mp4" type="video/mp4">
+            </video>
+            <div class="video-controls">
+                <button class="video-control-btn" id="playPauseBtn" aria-label="Play/Pause">
+                    <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M8 5v14l11-7z"/>
+                    </svg>
+                    <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+                    </svg>
+                </button>
+                <button class="video-control-btn" id="muteBtn" aria-label="Mute/Unmute">
+                    <svg class="icon-unmuted" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+                    </svg>
+                    <svg class="icon-muted" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Audio Section (nascosta) -->
+    <section class="section audio-section section-hidden" id="audio">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="section_listen">LISTEN</h2>
+            </div>
+            <div class="audio-player">
+                <div class="audio-track-list">
+                    <button class="audio-track active" data-src="assets/audio/track1.mp3">
+                        <span class="track-number">01</span>
+                        <span class="track-title">Autumn Leaves</span>
+                        <span class="track-duration">4:32</span>
+                    </button>
+                    <button class="audio-track" data-src="assets/audio/track2.mp3">
+                        <span class="track-number">02</span>
+                        <span class="track-title">Fly Me to the Moon</span>
+                        <span class="track-duration">3:45</span>
+                    </button>
+                    <button class="audio-track" data-src="assets/audio/track3.mp3">
+                        <span class="track-number">03</span>
+                        <span class="track-title">The Way You Look Tonight</span>
+                        <span class="track-duration">4:18</span>
+                    </button>
+                    <button class="audio-track" data-src="assets/audio/track4.mp3">
+                        <span class="track-number">04</span>
+                        <span class="track-title">Blue in Green</span>
+                        <span class="track-duration">5:02</span>
+                    </button>
+                    <button class="audio-track" data-src="assets/audio/track5.mp3">
+                        <span class="track-number">05</span>
+                        <span class="track-title">Misty</span>
+                        <span class="track-duration">4:55</span>
+                    </button>
+                </div>
+                <div class="audio-controls">
+                    <div class="audio-now-playing">
+                        <span class="now-playing-title">Autumn Leaves</span>
+                    </div>
+                    <div class="audio-progress-container">
+                        <span class="audio-time current">0:00</span>
+                        <div class="audio-progress">
+                            <div class="audio-progress-bar"></div>
+                        </div>
+                        <span class="audio-time duration">4:32</span>
+                    </div>
+                    <div class="audio-buttons">
+                        <button class="audio-btn" id="prevTrack" aria-label="Previous">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/></svg>
+                        </button>
+                        <button class="audio-btn play-btn" id="audioPlayBtn" aria-label="Play">
+                            <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                            <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+                        </button>
+                        <button class="audio-btn" id="nextTrack" aria-label="Next">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chi sono Section (espandibile) -->
+    <section class="section chi-sono-section" id="chi-sono">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="section_chi_sono">Quién soy</h2>
+            </div>
+            <div class="chi-sono-wrap" data-chi-sono>
+                <button type="button" class="chi-sono-toggle" aria-expanded="false" aria-controls="chi-sono-content" id="chi-sono-btn">
+                    <span class="chi-sono-label" data-i18n="chi_sono_read">Lee mi historia</span>
+                    <span class="chi-sono-icon" aria-hidden="true"></span>
+                </button>
+                <div class="chi-sono-content" id="chi-sono-content" role="region" aria-labelledby="chi-sono-btn">
+                    <div class="chi-sono-text">
+                        <p data-i18n="chi_sono_p1">Mi nombre es Francesco Santo y soy artista, productor e ingeniero de sonido con una gran pasión por la música, que siempre ha sido una parte fundamental de mi vida. Empecé a acercarme a este mundo con solo 4 años, gracias a mi abuela. Luego, a los 12 años, empecé a tocar el piano y a los 16 me enamoré de la producción. Estudié piano, guitarra y bajo en Varese antes de mudarme a Bolonia.</p>
+                        <p data-i18n="chi_sono_p2">En 2022 tuve la oportunidad de participar en XFactor Italia, una experiencia que me dio una valoración positiva de 4/4. Al año siguiente, en 2023, publiqué mi primer álbum, «Santodice», que compuse y produje íntegramente yo mismo, un proyecto nacido tras ganar el concurso IMAIE.</p>
+                        <p data-i18n="chi_sono_p3">Actualmente trabajo como pianista en Sevilla, en Andalucía. Aquí he tenido la oportunidad de estudiar jazz y actuar en pequeños locales como la sala Griot, la Signora Pop y el Mutante. El arte callejero es una gran pasión mía, donde puedo encontrar un verdadero contacto con la gente y expresarme con total libertad.</p>
+                        <p data-i18n="chi_sono_p4">Además de la música, tengo una sólida formación: me gradué en Física en la Universidad de Bolonia en 2023, con una nota de 98 y un certificado de competencia en Ingeniería de Audio, Producción y Composición, válido en toda Europa, que me permitió unir mi pasión por la música al conocimiento técnico. Mis competencias abarcan desde la grabación en estudio hasta la producción, pasando por el manejo de mezcladores analógicos y digitales, hasta la composición y el arreglo.</p>
+                        <p data-i18n="chi_sono_p5">Cada día toco, compongo, mezclo y produzco para varios grupos musicales, y no veo la hora de colaborar también contigo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Repertoire Section -->
+    <section class="section repertoire-section" id="repertoire">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="section_repertoire">Repertorio</h2>
+            </div>
+            <div class="repertoire-grid">
+                <div class="repertoire-item" data-repertoire-item>
+                    <button type="button" class="repertoire-toggle" aria-expanded="false" aria-controls="repertoire-artists-1" id="repertoire-btn-1">
+                        <span class="repertoire-genre" data-i18n="repertoire_jazz">Jazz Standards</span>
+                        <span class="repertoire-icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="repertoire-artists-wrap" id="repertoire-artists-1" role="region" aria-labelledby="repertoire-btn-1">
+                        <p class="repertoire-artists">Bill Evans, Oscar Peterson, Keith Jarrett, Chet Baker, Miles Davis</p>
+                    </div>
+                </div>
+                <div class="repertoire-item" data-repertoire-item>
+                    <button type="button" class="repertoire-toggle" aria-expanded="false" aria-controls="repertoire-artists-2" id="repertoire-btn-2">
+                        <span class="repertoire-genre" data-i18n="repertoire_pop">Pop Internazionale</span>
+                        <span class="repertoire-icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="repertoire-artists-wrap" id="repertoire-artists-2" role="region" aria-labelledby="repertoire-btn-2">
+                        <p class="repertoire-artists">Coldplay, The Cinematic Orchestra, Bruno Mars, Adele, Ed Sheeran</p>
+                    </div>
+                </div>
+                <div class="repertoire-item" data-repertoire-item>
+                    <button type="button" class="repertoire-toggle" aria-expanded="false" aria-controls="repertoire-artists-3" id="repertoire-btn-3">
+                        <span class="repertoire-genre" data-i18n="repertoire_soul">Soul & R&B</span>
+                        <span class="repertoire-icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="repertoire-artists-wrap" id="repertoire-artists-3" role="region" aria-labelledby="repertoire-btn-3">
+                        <p class="repertoire-artists">Aretha Franklin, Ray Charles, Marvin Gaye, Alicia Keys, John Legend</p>
+                    </div>
+                </div>
+                <div class="repertoire-item" data-repertoire-item>
+                    <button type="button" class="repertoire-toggle" aria-expanded="false" aria-controls="repertoire-artists-4" id="repertoire-btn-4">
+                        <span class="repertoire-genre" data-i18n="repertoire_classical">Classica Moderna</span>
+                        <span class="repertoire-icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="repertoire-artists-wrap" id="repertoire-artists-4" role="region" aria-labelledby="repertoire-btn-4">
+                        <p class="repertoire-artists">Ludovico Einaudi, Yann Tiersen, Philip Glass, Max Richter</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section services-section" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="section_services">Servicios</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title" data-i18n="service_piano">Piano Solo</h3>
+                    <p class="service-desc" data-i18n="service_piano_desc">Performance elegante per cene raffinate, cocktail e momenti intimi</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title" data-i18n="service_ensemble">Ensemble</h3>
+                    <p class="service-desc" data-i18n="service_ensemble_desc">Duo, trio o quartetto con sassofonista, cantante, contrabbasso</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title" data-i18n="service_band">Custom Band</h3>
+                    <p class="service-desc" data-i18n="service_band_desc">Formazione su misura per eventi corporate e matrimoni esclusivi</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title" data-i18n="service_audio">Tecnico audio</h3>
+                    <p class="service-desc" data-i18n="service_audio_desc">Posso fare da tecnico audio agli eventi: mixaggio live, gestione del suono e attrezzature</p>
+                </div>
+            </div>
+            <div class="services-note">
+                <p data-i18n="services_note">Ogni performance è personalizzata. Repertorio, durata e formazione vengono definiti insieme al cliente per creare l'atmosfera perfetta.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section (Expertise) -->
+    <section class="section skills-section" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="section_skills">Competencias</h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <span class="skill-icon skill-icon-svg" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 12h2M7 12h2M11 12h2M15 12h2M19 12h2M3 8h1M7 8h1M11 8h1M15 8h1M19 8h1M3 16h1M7 16h1M11 16h1M15 16h1M19 16h1"/></svg>
+                    </span>
+                    <h4 class="skill-title" data-i18n="skill_sound_eng">Sound Engineering</h4>
+                    <p class="skill-desc" data-i18n="skill_sound_eng_desc">Tecnico del suono professionale</p>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-icon skill-icon-svg" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 18V6M16 18V6"/><circle cx="8" cy="11" r="2"/><circle cx="16" cy="11" r="2"/></svg>
+                    </span>
+                    <h4 class="skill-title" data-i18n="skill_mixing">Mixing & Mastering</h4>
+                    <p class="skill-desc" data-i18n="skill_mixing_desc">Mixer analogici e digitali</p>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-icon skill-icon-svg" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 18V5l12-2v13"/><path d="M9 9l12-2"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+                    </span>
+                    <h4 class="skill-title" data-i18n="skill_production">Music Production</h4>
+                    <p class="skill-desc" data-i18n="skill_production_desc">Produzione e arrangiamento</p>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-icon skill-icon-svg" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12h2M6 12h2M10 12h2M14 12h2M18 12h2M22 12h-2M4 10v4M8 8v8M12 6v12M16 8v8M20 10v4"/></svg>
+                    </span>
+                    <h4 class="skill-title" data-i18n="skill_design">Sound Design</h4>
+                    <p class="skill-desc" data-i18n="skill_design_desc">Design sonoro avanzato</p>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-icon skill-icon-svg" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/><path d="M8 7h8M8 11h8M8 15h4"/></svg>
+                    </span>
+                    <h4 class="skill-title" data-i18n="skill_theory">Music Theory</h4>
+                    <p class="skill-desc" data-i18n="skill_theory_desc">Armonia e teoria musicale</p>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-icon skill-icon-svg" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    </span>
+                    <h4 class="skill-title" data-i18n="skill_teaching">Teaching</h4>
+                    <p class="skill-desc" data-i18n="skill_teaching_desc">Insegnante di pianoforte</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section projects-section" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="section_projects">Proyectos</h2>
+            </div>
+            <div class="projects-grid projects-grid-two">
+                <a href="https://open.spotify.com/intl-it/album/2iQ441z3swodt8IrR1zMyu?si=YBZb1LMCRsKnduWJ2Qpw6A" target="_blank" rel="noopener noreferrer" class="project-card project-card-link">
+                    <div class="project-image">
+                        <img src="Immagini/SANTODICE Album.png" alt="SANTODICE - Album su Spotify" class="project-img">
+                    </div>
+                    <h3 class="project-title" data-i18n="project_albums">Albums</h3>
+                </a>
+                <div class="project-card project-card-live">
+                    <div class="project-image project-image-video">
+                        <video class="project-live-video" id="projectLiveVideo" src="Immagini/Video Live.mp4" autoplay muted loop playsinline preload="auto" poster="Immagini/Live 1.jpg"></video>
+                        <button type="button" class="project-live-audio-hint" id="projectLiveAudioHint" data-i18n="project_live_hint" data-i18n-aria="project_live_hint" aria-label="Haz clic para escuchar el audio">Haz clic para escuchar el audio</button>
+                    </div>
+                    <h3 class="project-title" data-i18n="project_live">Live</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carousel Section -->
+    <section class="section carousel-section" id="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="section_gallery">Galería</h2>
+            </div>
+            <div class="carousel-wrap">
+                <button type="button" class="carousel-btn carousel-prev" id="carouselPrev" aria-label="Foto precedente" data-i18n-aria="carousel_prev">&lsaquo;</button>
+                <div class="carousel-track-container">
+                    <div class="carousel-track" id="carouselTrack">
+                        <div class="carousel-slide"><img src="Immagini/MainPhoto.jpg" alt="Francesco Santo"></div>
+                        <div class="carousel-slide"><img src="Immagini/Live 1.jpg" alt="Live 1"></div>
+                        <div class="carousel-slide"><img src="Immagini/Live 2.jpg" alt="Live 2"></div>
+                        <div class="carousel-slide"><img src="Immagini/Live 3.jpg" alt="Live 3"></div>
+                        <div class="carousel-slide"><img src="Immagini/Live 4.jpg" alt="Live 4"></div>
+                        <div class="carousel-slide"><img src="Immagini/Studio 1.JPG" alt="Studio 1"></div>
+                        <div class="carousel-slide"><img src="Immagini/Studio 4.JPG" alt="Studio 4"></div>
+                    </div>
+                </div>
+                <button type="button" class="carousel-btn carousel-next" id="carouselNext" aria-label="Foto successiva" data-i18n-aria="carousel_next">&rsaquo;</button>
+                <div class="carousel-dots" id="carouselDots"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact-section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="section_contact">Contacto</h2>
+            </div>
+            <div class="contact-content">
+                <p class="contact-intro" data-i18n="contact_intro">Para reservas, información o solicitudes personalizadas</p>
+                <div class="contact-details">
+                    <a href="mailto:francescosantowork@gmail.com" class="contact-link">
+                        <span class="contact-label" data-i18n="contact_email">Email</span>
+                        <span class="contact-value">francescosantowork@gmail.com</span>
+                    </a>
+                    <a href="tel:+393456152765" class="contact-link">
+                        <span class="contact-label" data-i18n="contact_phone">Teléfono</span>
+                        <span class="contact-value">+39 345 615 2765</span>
+                    </a>
+                </div>
+                <a href="mailto:francescosantowork@gmail.com" class="cta-button" data-i18n="contact_cta">
+                    Solicitar presupuesto
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-name">Francesco Santo</p>
+                <p class="footer-copy" data-i18n="footer_copy">© 2026 Todos los derechos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
