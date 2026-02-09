@@ -65,6 +65,7 @@ const TRANSLATIONS = {
         contact_email: 'Email',
         contact_phone: 'Teléfono',
         contact_cta: 'Solicitar presupuesto',
+        contact_instagram: 'Sígueme en Instagram',
         footer_copy: '© 2026 Todos los derechos reservados',
         aria_menu: 'Menú',
         carousel_prev: 'Foto anterior',
@@ -131,6 +132,7 @@ const TRANSLATIONS = {
         contact_email: 'Email',
         contact_phone: 'Phone',
         contact_cta: 'Request a quote',
+        contact_instagram: 'Follow me on Instagram',
         footer_copy: '© 2026 All rights reserved',
         aria_menu: 'Menu',
         carousel_prev: 'Previous photo',
@@ -197,6 +199,7 @@ const TRANSLATIONS = {
         contact_email: 'Email',
         contact_phone: 'Telefono',
         contact_cta: 'Richiedi un preventivo',
+        contact_instagram: 'Seguimi su Instagram',
         footer_copy: '© 2026 Tutti i diritti riservati',
         aria_menu: 'Menu',
         carousel_prev: 'Foto precedente',
@@ -225,16 +228,44 @@ function setLang(lang) {
     applyLanguage(lang);
 }
 
+function updateHeroAudioHintText() {
+    const audioBtn = document.getElementById('heroAudioHint');
+    if (!audioBtn) return;
+    
+    const heroVideo = document.getElementById('heroVideo');
+    if (!heroVideo) return;
+    
+    const lang = getStoredLang();
+    const isActive = audioBtn.classList.contains('audio-active') || (!heroVideo.muted && heroVideo.volume > 0);
+    
+    // Aggiorna l'aria-label in base alla lingua e allo stato
+    if (lang === 'it') {
+        audioBtn.setAttribute('aria-label', isActive ? 'Disattiva audio' : 'Attiva audio');
+    } else if (lang === 'en') {
+        audioBtn.setAttribute('aria-label', isActive ? 'Disable audio' : 'Enable audio');
+    } else {
+        audioBtn.setAttribute('aria-label', isActive ? 'Desactivar audio' : 'Activar audio');
+    }
+}
+
 function applyLanguage(lang) {
     const t = TRANSLATIONS[lang];
     if (!t) return;
 
     document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
+        // Salta il pulsante audio (gestito separatamente)
+        if (el.id === 'heroAudioHint') {
+            return;
+        }
         if (t[key] != null) el.textContent = t[key];
     });
     document.querySelectorAll('[data-i18n-aria]').forEach(el => {
         const key = el.getAttribute('data-i18n-aria');
+        // Salta il pulsante audio (gestito separatamente)
+        if (el.id === 'heroAudioHint') {
+            return;
+        }
         if (t[key] != null) el.setAttribute('aria-label', t[key]);
     });
 
@@ -255,6 +286,9 @@ function applyLanguage(lang) {
     document.querySelectorAll('.lang-btn').forEach(btn => {
         btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
     });
+    
+    // Aggiorna il testo del pulsante audio quando cambia la lingua
+    updateHeroAudioHintText();
 }
 
 function initLanguage() {
@@ -346,13 +380,44 @@ function initHeroVideo() {
         }
         requestAnimationFrame(fadeIn);
 
-        if (audioHint) audioHint.classList.add('hidden');
+        if (audioHint) {
+            audioHint.classList.add('audio-active');
+            updateHeroAudioHintText();
+        }
+    }
+
+    function disableAudioWithFadeOut() {
+        var duration = 0.4;
+        var start = performance.now();
+        var startVolume = heroVideo.volume;
+        
+        function fadeOut() {
+            var elapsed = (performance.now() - start) / 1000;
+            var v = Math.max(0, startVolume * (1 - elapsed / duration));
+            heroVideo.volume = v;
+            if (v > 0) {
+                requestAnimationFrame(fadeOut);
+            } else {
+                heroVideo.muted = true;
+                if (audioHint) {
+                    audioHint.classList.remove('audio-active');
+                    updateHeroAudioHintText();
+                }
+            }
+        }
+        requestAnimationFrame(fadeOut);
     }
 
     if (audioHint) {
         audioHint.addEventListener('click', function(e) {
             e.preventDefault();
-            enableAudioWithFadeIn();
+            if (heroVideo.muted || heroVideo.volume === 0) {
+                enableAudioWithFadeIn();
+            } else {
+                disableAudioWithFadeOut();
+            }
+            // Aggiorna il testo dopo il cambio di stato
+            setTimeout(updateHeroAudioHintText, 100);
         });
     }
 }

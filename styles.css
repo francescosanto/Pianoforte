@@ -328,33 +328,54 @@ button {
     animation: scrollPulse 2s ease-in-out infinite;
 }
 
-.hero-audio-hint {
+.hero-audio-btn {
     position: absolute;
-    bottom: 100px;
+    bottom: 40px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 4;
     margin: 0;
-    padding: 10px 20px;
-    font-family: var(--font-sans);
-    font-size: 0.8rem;
-    font-weight: 500;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: var(--color-white);
     background: rgba(0, 0, 0, 0.6);
     border: 1px solid rgba(255,255,255,0.2);
-    border-radius: 4px;
+    border-radius: 50%;
     cursor: pointer;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
 }
-.hero-audio-hint:hover {
-    background: rgba(0, 0, 0, 0.75);
+
+.hero-audio-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+    border-color: var(--color-gold);
+    color: var(--color-gold);
+    transform: translateX(-50%) scale(1.1);
 }
-.hero-audio-hint.hidden {
+
+.hero-audio-btn svg {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.hero-audio-btn .icon-mute {
     opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
+    transform: scale(0.8);
+}
+
+.hero-audio-btn.audio-active .icon-audio {
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+.hero-audio-btn.audio-active .icon-mute {
+    opacity: 1;
+    transform: scale(1);
 }
 
 /* ========================================
@@ -897,6 +918,7 @@ button {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
+    align-items: center;
 }
 
 .projects-grid-two {
@@ -984,6 +1006,11 @@ button {
     aspect-ratio: 4 / 5;
     overflow: hidden;
     margin-bottom: 20px;
+}
+
+/* Copertina album quadrata nella sezione Progetti */
+.project-image.project-image-square {
+    aspect-ratio: 1 / 1;
 }
 
 .project-placeholder {
@@ -1095,7 +1122,7 @@ button {
 
 /* Gallery: antracite (distinto da Projects) */
 .carousel-section {
-    background-color: var(--color-anthracite);
+    background-color: var(--color-black);
 }
 
 .carousel-section .container {
@@ -1283,6 +1310,41 @@ button {
 .cta-button:hover {
     background-color: var(--color-gold);
     color: var(--color-black);
+}
+
+.contact-instagram-wrap {
+    margin-top: 2.5rem;
+    text-align: center;
+}
+
+.contact-instagram {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--color-gray);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.contact-instagram:hover {
+    color: var(--color-gold);
+    transform: scale(1.02);
+}
+
+.contact-instagram:focus {
+    outline: 2px solid var(--color-gold);
+    outline-offset: 4px;
+}
+
+.contact-instagram-icon {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+}
+
+.contact-instagram-label {
+    letter-spacing: 0.02em;
 }
 
 /* ========================================
