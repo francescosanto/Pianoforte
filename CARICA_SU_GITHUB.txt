@@ -1,0 +1,41 @@
+========================================
+  CARICARE IL SITO SU GITHUB - 2 PASSI
+========================================
+
+Il repository "Pianoforte" non esiste ancora e GitHub CLI deve fare login.
+Esegui questi comandi nel terminale (uno alla volta).
+
+PASSO 1 - Login GitHub (una tantum)
+-----------------------------------
+Apri il terminale nella cartella del progetto e digita:
+
+  gh auth login
+
+Scegli:
+  - GitHub.com
+  - HTTPS
+  - Yes (authenticate Git with GitHub credentials)
+  - Login with a web browser
+
+Copia il codice che appare, premi Invio, incolla il codice nel browser
+e autorizza. Poi torna al terminale.
+
+PASSO 2 - Crea il repo e carica il sito
+--------------------------------------
+Dopo il login, esegui:
+
+  cd "c:\Users\frasa\Desktop\Siti web\Pianoforte"
+  gh repo create Pianoforte --public --source=. --remote=origin --push
+
+In questo modo viene creato il repository https://github.com/francescosanto/Pianoforte
+e il sito viene caricato.
+
+ALTERNATIVA (senza GitHub CLI)
+------------------------------
+1. Vai su https://github.com/new?name=Pianoforte
+2. Lascia "Public", NON spuntare "Add a README"
+3. Clicca "Create repository"
+4. Nel terminale, dalla cartella del progetto:
+   git push -u origin main
+
+========================================
