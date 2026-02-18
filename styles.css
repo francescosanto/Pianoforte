@@ -696,8 +696,10 @@ button {
 }
 
 .chi-sono-wrap {
-    max-width: 720px;
+    max-width: 900px;
     margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .chi-sono-toggle {
@@ -714,6 +716,8 @@ button {
     background: rgba(255, 255, 255, 0.02);
     font-family: inherit;
     transition: background-color var(--transition-fast), border-color var(--transition-fast);
+    box-sizing: border-box;
+    min-width: 0;
 }
 
 .chi-sono-toggle:hover {
@@ -731,6 +735,10 @@ button {
     font-weight: 400;
     color: var(--color-gold);
     letter-spacing: 0.05em;
+    flex: 1;
+    min-width: 0;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
 }
 
 .chi-sono-icon {
@@ -753,14 +761,21 @@ button {
     transition: max-height var(--transition-slow) ease;
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-top: none;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .chi-sono-wrap.open .chi-sono-content {
-    max-height: 1200px;
+    max-height: 5000px;
+    overflow: visible;
 }
 
 .chi-sono-text {
-    padding: 28px 24px 32px;
+    padding: 32px 28px 36px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+    max-width: 100%;
 }
 
 .chi-sono-text p {
@@ -768,6 +783,10 @@ button {
     color: var(--color-white-soft);
     line-height: 1.85;
     margin-bottom: 1em;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+    hyphens: auto;
 }
 
 .chi-sono-text p:last-child {
@@ -1570,5 +1589,22 @@ button {
     
     .contact-value {
         font-size: 1.1rem;
+    }
+    
+    .chi-sono-text {
+        padding: 24px 20px 28px;
+    }
+    
+    .chi-sono-toggle {
+        padding: 18px 20px;
+    }
+    
+    .chi-sono-wrap {
+        max-width: 100%;
+        padding: 0;
+    }
+    
+    .chi-sono-wrap.open .chi-sono-content {
+        max-height: 10000px;
     }
 }
