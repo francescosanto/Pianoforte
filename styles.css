@@ -364,19 +364,24 @@ button {
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-.hero-audio-btn .icon-mute {
+.hero-audio-btn .icon-audio {
     opacity: 0;
     transform: scale(0.8);
+}
+
+.hero-audio-btn .icon-mute {
+    opacity: 1;
+    transform: scale(1);
 }
 
 .hero-audio-btn.audio-active .icon-audio {
-    opacity: 0;
-    transform: scale(0.8);
+    opacity: 1;
+    transform: scale(1);
 }
 
 .hero-audio-btn.audio-active .icon-mute {
-    opacity: 1;
-    transform: scale(1);
+    opacity: 0;
+    transform: scale(0.8);
 }
 
 /* Social e donazione in hero (discreti) */
@@ -897,7 +902,7 @@ button {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     margin-bottom: 60px;
 }

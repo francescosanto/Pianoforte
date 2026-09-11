@@ -21,7 +21,7 @@
             <ul class="nav-links">
                 <li><a href="#chi-sono" data-i18n="nav_chi_sono">Quién soy</a></li>
                 <li><a href="#repertoire" data-i18n="nav_repertoire">Repertorio</a></li>
-                <li><a href="#services" data-i18n="nav_services">Servicios</a></li>
+                <li><a href="#services" data-i18n="nav_services">Servicios y competencias</a></li>
                 <li><a href="#projects" data-i18n="nav_projects">Proyectos</a></li>
                 <li><a href="#gallery" data-i18n="nav_gallery">Galería</a></li>
                 <li><a href="#contact" data-i18n="nav_contact">Contacto</a></li>
@@ -196,8 +196,6 @@
                         <p data-i18n="chi_sono_p3"></p>
                         <p data-i18n="chi_sono_p4"></p>
                         <p data-i18n="chi_sono_p5"></p>
-                        <p data-i18n="chi_sono_p6"></p>
-                        <p data-i18n="chi_sono_p7"></p>
                     </div>
                 </div>
             </div>
@@ -255,7 +253,7 @@
     <section class="section services-section" id="services">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title" data-i18n="section_services">Servicios</h2>
+                <h2 class="section-title" data-i18n="section_services">Servicios y competencias</h2>
             </div>
             <div class="services-grid">
                 <div class="service-card">
@@ -279,20 +277,38 @@
                 <div class="service-card">
                     <div class="service-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                            <path d="M3 12h2M7 12h2M11 12h2M15 12h2M19 12h2M3 8h1M7 8h1M11 8h1M15 8h1M19 8h1M3 16h1M7 16h1M11 16h1M15 16h1M19 16h1"/>
                         </svg>
                     </div>
-                    <h3 class="service-title" data-i18n="service_band">Custom Band</h3>
-                    <p class="service-desc" data-i18n="service_band_desc">Formazione su misura per eventi corporate e matrimoni esclusivi</p>
+                    <h3 class="service-title" data-i18n="service_sound_eng">Sound Engineering</h3>
+                    <p class="service-desc" data-i18n="service_sound_eng_desc">Tecnico del suono per eventi: mixaggio live, gestione del suono e delle attrezzature</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                            <path d="M8 18V6M16 18V6"/><circle cx="8" cy="11" r="2"/><circle cx="16" cy="11" r="2"/>
                         </svg>
                     </div>
-                    <h3 class="service-title" data-i18n="service_audio">Tecnico audio</h3>
-                    <p class="service-desc" data-i18n="service_audio_desc">Posso fare da tecnico audio agli eventi: mixaggio live, gestione del suono e attrezzature</p>
+                    <h3 class="service-title" data-i18n="service_mixing">Mixing &amp; Mastering</h3>
+                    <p class="service-desc" data-i18n="service_mixing_desc">Mixing e mastering analogico e digitale per un suono curato e professionale</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M9 18V5l12-2v13"/><path d="M9 9l12-2"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title" data-i18n="service_production">Music Production</h3>
+                    <p class="service-desc" data-i18n="service_production_desc">Produzione musicale e arrangiamento, dall'idea al brano finito</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/><path d="M8 7h8M8 11h8M8 15h4"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title" data-i18n="service_teaching">Insegnamento</h3>
+                    <p class="service-desc" data-i18n="service_teaching_desc">Lezioni di pianoforte personalizzate, dal principiante al livello avanzato</p>
                 </div>
             </div>
             <div class="services-note">
@@ -320,59 +336,6 @@
                         <button type="button" class="project-live-audio-hint" id="projectLiveAudioHint" data-i18n="project_live_hint" data-i18n-aria="project_live_hint" aria-label="Haz clic para escuchar el audio">Haz clic para escuchar el audio</button>
                     </div>
                     <h3 class="project-title" data-i18n="project_live">Live</h3>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section (Expertise) -->
-    <section class="section skills-section" id="skills">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title" data-i18n="section_skills">Competencias</h2>
-            </div>
-            <div class="skills-grid">
-                <div class="skill-item">
-                    <span class="skill-icon skill-icon-svg" aria-hidden="true">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 12h2M7 12h2M11 12h2M15 12h2M19 12h2M3 8h1M7 8h1M11 8h1M15 8h1M19 8h1M3 16h1M7 16h1M11 16h1M15 16h1M19 16h1"/></svg>
-                    </span>
-                    <h4 class="skill-title" data-i18n="skill_sound_eng">Sound Engineering</h4>
-                    <p class="skill-desc" data-i18n="skill_sound_eng_desc">Tecnico del suono professionale</p>
-                </div>
-                <div class="skill-item">
-                    <span class="skill-icon skill-icon-svg" aria-hidden="true">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 18V6M16 18V6"/><circle cx="8" cy="11" r="2"/><circle cx="16" cy="11" r="2"/></svg>
-                    </span>
-                    <h4 class="skill-title" data-i18n="skill_mixing">Mixing & Mastering</h4>
-                    <p class="skill-desc" data-i18n="skill_mixing_desc">Mixer analogici e digitali</p>
-                </div>
-                <div class="skill-item">
-                    <span class="skill-icon skill-icon-svg" aria-hidden="true">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 18V5l12-2v13"/><path d="M9 9l12-2"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
-                    </span>
-                    <h4 class="skill-title" data-i18n="skill_production">Music Production</h4>
-                    <p class="skill-desc" data-i18n="skill_production_desc">Produzione e arrangiamento</p>
-                </div>
-                <div class="skill-item">
-                    <span class="skill-icon skill-icon-svg" aria-hidden="true">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12h2M6 12h2M10 12h2M14 12h2M18 12h2M22 12h-2M4 10v4M8 8v8M12 6v12M16 8v8M20 10v4"/></svg>
-                    </span>
-                    <h4 class="skill-title" data-i18n="skill_design">Sound Design</h4>
-                    <p class="skill-desc" data-i18n="skill_design_desc">Design sonoro avanzato</p>
-                </div>
-                <div class="skill-item">
-                    <span class="skill-icon skill-icon-svg" aria-hidden="true">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/><path d="M8 7h8M8 11h8M8 15h4"/></svg>
-                    </span>
-                    <h4 class="skill-title" data-i18n="skill_theory">Music Theory</h4>
-                    <p class="skill-desc" data-i18n="skill_theory_desc">Armonia e teoria musicale</p>
-                </div>
-                <div class="skill-item">
-                    <span class="skill-icon skill-icon-svg" aria-hidden="true">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                    </span>
-                    <h4 class="skill-title" data-i18n="skill_teaching">Teaching</h4>
-                    <p class="skill-desc" data-i18n="skill_teaching_desc">Insegnante di pianoforte</p>
                 </div>
             </div>
         </div>
@@ -416,9 +379,9 @@
                         <span class="contact-label" data-i18n="contact_email">Email</span>
                         <span class="contact-value">francescosantowork@gmail.com</span>
                     </a>
-                    <a href="tel:+393456152765" class="contact-link">
+                    <a href="tel:+34614635496" class="contact-link">
                         <span class="contact-label" data-i18n="contact_phone">Teléfono</span>
-                        <span class="contact-value">+39 345 615 2765</span>
+                        <span class="contact-value">+34 614 635 496</span>
                     </a>
                 </div>
                 <a href="mailto:francescosantowork@gmail.com" class="cta-button" data-i18n="contact_cta">
