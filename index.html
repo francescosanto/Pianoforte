@@ -24,6 +24,7 @@
                 <li><a href="#services" data-i18n="nav_services">Servicios y competencias</a></li>
                 <li><a href="#projects" data-i18n="nav_projects">Proyectos</a></li>
                 <li><a href="#gallery" data-i18n="nav_gallery">Galería</a></li>
+                <li><a href="#reviews" data-i18n="nav_reviews">Testimonios</a></li>
                 <li><a href="#contact" data-i18n="nav_contact">Contacto</a></li>
             </ul>
             <div class="lang-switcher" role="group" aria-label="Selección de idioma" data-i18n-aria="lang_switcher_aria">
@@ -75,6 +76,12 @@
                     <path d="M7.076 21.337H2.47a.641.641 0 0 1-.633-.74L4.944 3.72a.77.77 0 0 1 .76-.657h6.227c2.572 0 4.578.543 5.921 1.593 1.288 1 1.935 2.426 1.935 4.258 0 .658-.084 1.273-.25 1.84-.166.57-.423 1.116-.77 1.63-.348.513-.775.97-1.281 1.374-.506.403-1.09.734-1.753.993-.656.258-1.382.45-2.175.574-.795.124-1.634.166-2.518.166H9.694a.77.77 0 0 0-.76.657l-.944 5.98-.283 1.78a.641.641 0 0 1-.633.74zM6.944 7.66l-.66 4.18a.641.641 0 0 0 .633.74h2.165c.955 0 1.791-.124 2.508-.372.717-.248 1.324-.58 1.82-.996.496-.415.863-.9 1.101-1.455.238-.555.357-1.148.357-1.778 0-.893-.21-1.55-.63-1.968-.42-.419-1.056-.628-1.907-.628H7.72a.77.77 0 0 0-.76.657L6.944 7.66z"/>
                 </svg>
                 <span data-i18n="hero_donate">Offrimi un caffè</span>
+            </a>
+            <a href="#reviews" class="hero-review-link" data-i18n-aria="hero_review" aria-label="Dime lo que sentiste">
+                <svg class="hero-review-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M20 2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h4l4 4 4-4h4c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/>
+                </svg>
+                <span data-i18n="hero_review">Dime lo que sentiste</span>
             </a>
         </div>
     </header>
@@ -366,6 +373,55 @@
         </div>
     </section>
 
+    <!-- Reviews / Testimonios -->
+    <section class="section reviews-section" id="reviews">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="section_reviews">Testimonios</h2>
+            </div>
+            <p class="reviews-intro" data-i18n="reviews_intro">Si has escuchado una de mis actuaciones, me encantaría saber qué has sentido. Puedes dejar un comentario y, si quieres, una foto.</p>
+
+            <div class="reviews-list" id="reviewsList" aria-live="polite"></div>
+
+            <form class="review-form" id="reviewForm" novalidate>
+                <input type="text" name="website" class="review-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+                <h3 class="review-form-title" data-i18n="reviews_form_title">Deja tu impresión</h3>
+                <p class="review-form-note" data-i18n="reviews_note">Tu comentario será visible de inmediato.</p>
+
+                <div class="review-fields">
+                    <label class="review-field">
+                        <span data-i18n="reviews_name">Nombre</span>
+                        <input type="text" name="name" id="reviewName" class="review-input" required maxlength="80" autocomplete="name" data-i18n-placeholder="reviews_name_ph" placeholder="Tu nombre">
+                    </label>
+                    <label class="review-field">
+                        <span data-i18n="reviews_place">Lugar o ocasión (opcional)</span>
+                        <input type="text" name="place" id="reviewPlace" class="review-input" maxlength="80" data-i18n-placeholder="reviews_place_ph" placeholder="Sevilla, hotel, evento...">
+                    </label>
+                    <label class="review-field review-field-full">
+                        <span data-i18n="reviews_message">Tu comentario</span>
+                        <textarea name="message" id="reviewMessage" class="review-input review-textarea" required maxlength="1200" rows="5" data-i18n-placeholder="reviews_message_ph" placeholder="Cuéntame qué has sentido..."></textarea>
+                    </label>
+                </div>
+
+                <div class="review-media">
+                    <span class="review-media-label" data-i18n="reviews_media_label">Fotos (opcional)</span>
+                    <p class="review-media-hint" data-i18n="reviews_media_hint">Puedes añadir hasta 4 fotos.</p>
+                    <input type="file" id="reviewFiles" class="review-file-input" accept="image/jpeg,image/png,image/webp,image/gif" multiple>
+                    <button type="button" class="review-dropzone" id="reviewDropzone">
+                        <span data-i18n="reviews_media_btn">Añadir fotos</span>
+                    </button>
+                    <ul class="review-file-list" id="reviewFileList"></ul>
+                </div>
+
+                <div class="review-form-actions">
+                    <button type="submit" class="cta-button review-submit" id="reviewSubmit" data-i18n="reviews_submit">Enviar</button>
+                    <p class="review-status" id="reviewStatus" role="status" aria-live="polite"></p>
+                </div>
+            </form>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section class="section contact-section" id="contact">
         <div class="container">
@@ -406,9 +462,28 @@
                 <p class="footer-name">Francesco Santo</p>
                 <p class="footer-copy" data-i18n="footer_copy">© 2026 Todos los derechos reservados</p>
             </div>
+            <div class="admin-bar" id="adminBar">
+                <form class="admin-login" id="adminLoginForm">
+                    <span class="admin-label" data-i18n="admin_label">Admin</span>
+                    <input type="password" id="adminPassword" class="admin-password" autocomplete="current-password" data-i18n-placeholder="admin_password_ph" placeholder="Contraseña">
+                    <button type="submit" class="admin-btn" data-i18n="admin_login">Entrar</button>
+                    <p class="admin-status" id="adminStatus" role="status"></p>
+                </form>
+                <div class="admin-session" id="adminSession" hidden>
+                    <span class="admin-session-label" data-i18n="admin_logged_in">Modo admin activo</span>
+                    <button type="button" class="admin-btn" id="adminLogout" data-i18n="admin_logout">Salir</button>
+                </div>
+            </div>
         </div>
     </footer>
 
+    <div class="review-lightbox" id="reviewLightbox" hidden>
+        <button type="button" class="review-lightbox-close" id="reviewLightboxClose" aria-label="Cerrar" data-i18n-aria="reviews_lightbox_close">&times;</button>
+        <div class="review-lightbox-inner" id="reviewLightboxInner"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-config.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

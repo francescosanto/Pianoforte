@@ -14,11 +14,13 @@ const TRANSLATIONS = {
         nav_services: 'Servicios y competencias',
         nav_projects: 'Proyectos',
         nav_gallery: 'Galería',
+        nav_reviews: 'Testimonios',
         nav_contact: 'Contacto',
         hero_audio_hint: 'Haz clic para activar el audio',
         hero_subtitle: 'Tu evento. Mi piano. El ambiente perfecto.',
         hero_follow_social: 'Sígueme en redes',
         hero_donate: 'Invítame un café',
+        hero_review: 'Dime lo que sentiste',
         hero_scroll: 'Scroll',
         section_performance: 'PERFORMANCE',
         section_listen: 'LISTEN',
@@ -28,6 +30,7 @@ const TRANSLATIONS = {
         section_skills: 'Servicios y competencias',
         section_projects: 'Proyectos',
         section_gallery: 'Galería',
+        section_reviews: 'Testimonios',
         section_contact: 'Contacto',
         chi_sono_read: 'Lee mi historia',
         chi_sono_p1: '¡Hola! Me llamo Francesco y soy pianista y productor musical.',
@@ -55,6 +58,36 @@ const TRANSLATIONS = {
         project_albums: 'Albums',
         project_live: 'Live',
         project_live_hint: 'Haz clic para escuchar el audio',
+        reviews_intro: 'Si has escuchado una de mis actuaciones, me encantaría saber qué has sentido. Puedes dejar un comentario y, si quieres, una foto.',
+        reviews_empty: 'Aún no hay testimonios. Puedes ser el primero.',
+        reviews_form_title: 'Deja tu impresión',
+        reviews_note: 'Tu comentario será visible de inmediato.',
+        reviews_name: 'Nombre',
+        reviews_name_ph: 'Tu nombre',
+        reviews_place: 'Lugar o ocasión (opcional)',
+        reviews_place_ph: 'Sevilla, hotel, evento...',
+        reviews_message: 'Tu comentario',
+        reviews_message_ph: 'Cuéntame qué has sentido...',
+        reviews_media_label: 'Fotos (opcional)',
+        reviews_media_hint: 'Puedes añadir hasta 4 fotos.',
+        reviews_media_btn: 'Añadir fotos',
+        reviews_submit: 'Enviar',
+        reviews_sending: 'Enviando...',
+        reviews_success: 'Gracias. Tu comentario ya está publicado.',
+        reviews_error: 'No se ha podido enviar. Inténtalo de nuevo o escríbeme por email.',
+        reviews_file_too_big: 'La foto es demasiado grande (máx. 8 MB).',
+        reviews_too_many_photos: 'Puedes añadir un máximo de 4 fotos.',
+        reviews_invalid_type: 'Formato no válido. Usa fotos JPG, PNG o WEBP.',
+        reviews_remove_file: 'Quitar',
+        reviews_lightbox_close: 'Cerrar',
+        admin_label: 'Admin',
+        admin_password_ph: 'Contraseña',
+        admin_login: 'Entrar',
+        admin_logout: 'Salir',
+        admin_logged_in: 'Modo admin activo',
+        admin_error: 'Contraseña incorrecta.',
+        admin_delete: 'Eliminar comentario',
+        admin_delete_confirm: '¿Eliminar este comentario?',
         contact_intro: 'Para reservas, información o solicitudes personalizadas',
         contact_email: 'Email',
         contact_phone: 'Teléfono',
@@ -75,11 +108,13 @@ const TRANSLATIONS = {
         nav_services: 'Services & skills',
         nav_projects: 'Projects',
         nav_gallery: 'Gallery',
+        nav_reviews: 'Reviews',
         nav_contact: 'Contact',
         hero_audio_hint: 'Click to enable audio',
         hero_subtitle: 'Your event. My piano. The perfect atmosphere.',
         hero_follow_social: 'Follow me on social',
         hero_donate: 'Buy me a coffee',
+        hero_review: 'Tell me what you felt',
         hero_scroll: 'Scroll',
         section_performance: 'PERFORMANCE',
         section_listen: 'LISTEN',
@@ -89,6 +124,7 @@ const TRANSLATIONS = {
         section_skills: 'Services & skills',
         section_projects: 'Projects',
         section_gallery: 'Gallery',
+        section_reviews: 'Reviews',
         section_contact: 'Contact',
         chi_sono_read: 'Read my story',
         chi_sono_p1: 'Hi! My name is Francesco and I\'m a pianist and music producer.',
@@ -116,6 +152,36 @@ const TRANSLATIONS = {
         project_albums: 'Albums',
         project_live: 'Live',
         project_live_hint: 'Click to listen to audio',
+        reviews_intro: 'If you have heard one of my performances, I would love to know what you felt. You can leave a comment and, if you like, a photo.',
+        reviews_empty: 'There are no reviews yet. You can be the first.',
+        reviews_form_title: 'Leave your impression',
+        reviews_note: 'Your comment will be visible immediately.',
+        reviews_name: 'Name',
+        reviews_name_ph: 'Your name',
+        reviews_place: 'Place or occasion (optional)',
+        reviews_place_ph: 'Seville, hotel, event...',
+        reviews_message: 'Your comment',
+        reviews_message_ph: 'Tell me what you felt...',
+        reviews_media_label: 'Photos (optional)',
+        reviews_media_hint: 'You can add up to 4 photos.',
+        reviews_media_btn: 'Add photos',
+        reviews_submit: 'Send',
+        reviews_sending: 'Sending...',
+        reviews_success: 'Thank you. Your comment is now published.',
+        reviews_error: 'It could not be sent. Please try again or write to me by email.',
+        reviews_file_too_big: 'The photo is too large (max 8 MB).',
+        reviews_too_many_photos: 'You can add a maximum of 4 photos.',
+        reviews_invalid_type: 'Invalid format. Use JPG, PNG or WEBP photos.',
+        reviews_remove_file: 'Remove',
+        reviews_lightbox_close: 'Close',
+        admin_label: 'Admin',
+        admin_password_ph: 'Password',
+        admin_login: 'Log in',
+        admin_logout: 'Log out',
+        admin_logged_in: 'Admin mode on',
+        admin_error: 'Incorrect password.',
+        admin_delete: 'Delete comment',
+        admin_delete_confirm: 'Delete this comment?',
         contact_intro: 'For bookings, information or custom requests',
         contact_email: 'Email',
         contact_phone: 'Phone',
@@ -136,11 +202,13 @@ const TRANSLATIONS = {
         nav_services: 'Servizi e competenze',
         nav_projects: 'Progetti',
         nav_gallery: 'Galleria',
+        nav_reviews: 'Recensioni',
         nav_contact: 'Contatti',
         hero_audio_hint: 'Clicca per attivare l\'audio',
         hero_subtitle: 'Il tuo evento. Il mio piano. L\'atmosfera perfetta.',
         hero_follow_social: 'Seguimi sui social',
         hero_donate: 'Offrimi un caffè',
+        hero_review: 'Dimmi cosa hai sentito',
         hero_scroll: 'Scroll',
         section_performance: 'PERFORMANCE',
         section_listen: 'LISTEN',
@@ -150,6 +218,7 @@ const TRANSLATIONS = {
         section_skills: 'Servizi e competenze',
         section_projects: 'Progetti',
         section_gallery: 'Galleria',
+        section_reviews: 'Recensioni',
         section_contact: 'Contatti',
         chi_sono_read: 'Leggi la mia storia',
         chi_sono_p1: 'Ciao! Mi chiamo Francesco e sono un pianista e produttore musicale.',
@@ -177,6 +246,36 @@ const TRANSLATIONS = {
         project_albums: 'Albums',
         project_live: 'Live',
         project_live_hint: 'Clicca per ascoltare l\'audio',
+        reviews_intro: 'Se hai ascoltato una mia esibizione, mi farebbe piacere sapere cosa hai provato. Puoi lasciare un commento e, se vuoi, una foto.',
+        reviews_empty: 'Non ci sono ancora recensioni. Puoi essere il primo.',
+        reviews_form_title: 'Lascia la tua impressione',
+        reviews_note: 'Il tuo commento sarà visibile subito.',
+        reviews_name: 'Nome',
+        reviews_name_ph: 'Il tuo nome',
+        reviews_place: 'Luogo o occasione (opzionale)',
+        reviews_place_ph: 'Siviglia, hotel, evento...',
+        reviews_message: 'Il tuo commento',
+        reviews_message_ph: 'Raccontami cosa hai provato...',
+        reviews_media_label: 'Foto (opzionale)',
+        reviews_media_hint: 'Puoi aggiungere fino a 4 foto.',
+        reviews_media_btn: 'Aggiungi foto',
+        reviews_submit: 'Invia',
+        reviews_sending: 'Invio in corso...',
+        reviews_success: 'Grazie. Il tuo commento è già visibile.',
+        reviews_error: 'Invio non riuscito. Riprova oppure scrivimi via email.',
+        reviews_file_too_big: 'La foto è troppo grande (max 8 MB).',
+        reviews_too_many_photos: 'Puoi aggiungere al massimo 4 foto.',
+        reviews_invalid_type: 'Formato non valido. Usa foto JPG, PNG o WEBP.',
+        reviews_remove_file: 'Rimuovi',
+        reviews_lightbox_close: 'Chiudi',
+        admin_label: 'Admin',
+        admin_password_ph: 'Password',
+        admin_login: 'Accedi',
+        admin_logout: 'Esci',
+        admin_logged_in: 'Modalità admin attiva',
+        admin_error: 'Password non corretta.',
+        admin_delete: 'Elimina commento',
+        admin_delete_confirm: 'Eliminare questo commento?',
         contact_intro: 'Per prenotazioni, informazioni o richieste personalizzate',
         contact_email: 'Email',
         contact_phone: 'Telefono',
@@ -265,12 +364,35 @@ function applyLanguage(lang) {
         if (t.carousel_go_slide) dot.setAttribute('aria-label', t.carousel_go_slide + ' ' + (i + 1));
     });
 
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+        const key = el.getAttribute('data-i18n-placeholder');
+        if (t[key] != null) el.setAttribute('placeholder', t[key]);
+    });
+
     document.querySelectorAll('.lang-btn').forEach(btn => {
         btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
     });
     
     // Aggiorna il testo del pulsante audio quando cambia la lingua
     updateHeroAudioHintText();
+
+    if (typeof renderReviews === 'function') {
+        renderReviews(publishedReviews);
+    }
+    if (typeof renderReviewFileList === 'function') {
+        renderReviewFileList();
+    }
+    const statusEl = document.getElementById('reviewStatus');
+    if (statusEl && statusEl.dataset.statusKey && t[statusEl.dataset.statusKey] != null) {
+        statusEl.textContent = t[statusEl.dataset.statusKey];
+    }
+    const submitBtn = document.getElementById('reviewSubmit');
+    if (submitBtn && submitBtn.disabled && t.reviews_sending) {
+        submitBtn.textContent = t.reviews_sending;
+    }
+    if (typeof updateAdminUI === 'function') {
+        updateAdminUI();
+    }
 }
 
 function initLanguage() {
@@ -291,6 +413,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initCarousel();
     initRepertoireAccordion();
     initChiSono();
+    initReviews();
     initScrollAnimations();
 });
 
@@ -727,7 +850,7 @@ function initScrollAnimations() {
                 entry.target.classList.add('visible');
                 
                 // Staggered animation for grid items
-                const children = entry.target.querySelectorAll('.repertoire-item, .service-card, .project-card, .skill-item');
+                const children = entry.target.querySelectorAll('.repertoire-item, .service-card, .project-card, .skill-item, .review-card');
                 children.forEach((child, index) => {
                     setTimeout(() => {
                         child.classList.add('visible');
@@ -741,7 +864,622 @@ function initScrollAnimations() {
     document.querySelectorAll('.section-header').forEach(el => observer.observe(el));
     
     // Observe grid containers
-    document.querySelectorAll('.chi-sono-wrap, .repertoire-grid, .services-grid, .projects-grid, .skills-grid, .carousel-wrap').forEach(el => {
+    document.querySelectorAll('.chi-sono-wrap, .repertoire-grid, .services-grid, .projects-grid, .skills-grid, .carousel-wrap, .reviews-intro, .review-form').forEach(el => {
         observer.observe(el);
     });
+}
+
+/* ========================================
+   Recensioni / Testimonios
+======================================== */
+
+const REVIEW_MAX_PHOTOS = 4;
+const REVIEW_MAX_PHOTO_BYTES = 8 * 1024 * 1024;
+const REVIEW_PHOTOS_BUCKET = 'review-photos';
+
+let publishedReviews = [];
+let reviewFiles = [];
+let supabaseClient = null;
+let reviewsPage = 0;
+const REVIEWS_PER_PAGE = 3;
+
+function translate(key) {
+    const lang = getStoredLang();
+    const dict = TRANSLATIONS[lang] || TRANSLATIONS[DEFAULT_LANG];
+    return dict[key] != null ? dict[key] : key;
+}
+
+function getSupabaseClient() {
+    if (supabaseClient) return supabaseClient;
+    const url = window.SUPABASE_URL;
+    const key = window.SUPABASE_ANON_KEY;
+    if (!url || !key || !window.supabase || typeof window.supabase.createClient !== 'function') {
+        return null;
+    }
+    supabaseClient = window.supabase.createClient(url, key);
+    return supabaseClient;
+}
+
+function initReviews() {
+    loadPublishedReviews();
+    initReviewForm();
+    initReviewLightbox();
+    initReviewAdmin();
+}
+
+function loadPublishedReviews() {
+    const client = getSupabaseClient();
+    if (!client) {
+        renderReviews([]);
+        return;
+    }
+
+    client
+        .from('reviews')
+        .select('id, name, place, message, photos, created_at')
+        .eq('approved', true)
+        .order('created_at', { ascending: false })
+        .then(function(result) {
+            if (result.error) {
+                renderReviews([]);
+                return;
+            }
+            const rows = result.data || [];
+            renderReviews(rows.map(function(row) {
+                return {
+                    id: row.id,
+                    name: row.name,
+                    place: row.place,
+                    text: row.message,
+                    photos: Array.isArray(row.photos) ? row.photos : [],
+                    date: row.created_at
+                };
+            }));
+        })
+        .catch(function() {
+            renderReviews([]);
+        });
+}
+
+function formatReviewDate(dateStr) {
+    if (!dateStr) return '';
+    const parsed = new Date(dateStr);
+    if (isNaN(parsed.getTime())) return dateStr;
+    const lang = getStoredLang();
+    const locale = lang === 'it' ? 'it-IT' : lang === 'en' ? 'en-GB' : 'es-ES';
+    return parsed.toLocaleDateString(locale, { year: 'numeric', month: 'long' });
+}
+
+function renderReviews(reviews) {
+    const list = document.getElementById('reviewsList');
+    if (!list) return;
+    publishedReviews = Array.isArray(reviews) ? reviews : [];
+    list.innerHTML = '';
+
+    if (!publishedReviews.length) {
+        const empty = document.createElement('p');
+        empty.className = 'reviews-empty';
+        empty.textContent = translate('reviews_empty');
+        list.appendChild(empty);
+        return;
+    }
+
+    const pages = Math.ceil(publishedReviews.length / REVIEWS_PER_PAGE);
+    if (reviewsPage >= pages) reviewsPage = Math.max(0, pages - 1);
+
+    const wrap = document.createElement('div');
+    wrap.className = 'reviews-carousel';
+
+    const trackContainer = document.createElement('div');
+    trackContainer.className = 'reviews-track-container';
+    const track = document.createElement('div');
+    track.className = 'reviews-track';
+    track.style.width = (pages * 100) + '%';
+
+    for (var p = 0; p < pages; p++) {
+        const page = document.createElement('div');
+        page.className = 'reviews-page';
+        page.style.flex = '0 0 ' + (100 / pages) + '%';
+        publishedReviews.slice(p * REVIEWS_PER_PAGE, (p + 1) * REVIEWS_PER_PAGE).forEach(function(review) {
+            page.appendChild(createReviewCard(review));
+        });
+        track.appendChild(page);
+    }
+
+    trackContainer.appendChild(track);
+    wrap.appendChild(trackContainer);
+
+    function updateReviewsCarousel() {
+        track.style.transform = 'translateX(-' + (reviewsPage * (100 / pages)) + '%)';
+        wrap.querySelectorAll('.carousel-dot').forEach(function(dot, i) {
+            dot.classList.toggle('active', i === reviewsPage);
+        });
+        if (prevBtn) prevBtn.disabled = pages <= 1;
+        if (nextBtn) nextBtn.disabled = pages <= 1;
+    }
+
+    function goTo(i) {
+        reviewsPage = ((i % pages) + pages) % pages;
+        updateReviewsCarousel();
+    }
+
+    var prevBtn = null;
+    var nextBtn = null;
+    if (pages > 1) {
+        prevBtn = document.createElement('button');
+        prevBtn.type = 'button';
+        prevBtn.className = 'carousel-btn carousel-prev';
+        prevBtn.setAttribute('aria-label', translate('carousel_prev'));
+        prevBtn.innerHTML = '&lsaquo;';
+        prevBtn.addEventListener('click', function() { goTo(reviewsPage - 1); });
+
+        nextBtn = document.createElement('button');
+        nextBtn.type = 'button';
+        nextBtn.className = 'carousel-btn carousel-next';
+        nextBtn.setAttribute('aria-label', translate('carousel_next'));
+        nextBtn.innerHTML = '&rsaquo;';
+        nextBtn.addEventListener('click', function() { goTo(reviewsPage + 1); });
+
+        wrap.insertBefore(prevBtn, trackContainer);
+        wrap.appendChild(nextBtn);
+
+        const dots = document.createElement('div');
+        dots.className = 'carousel-dots reviews-dots';
+        for (var i = 0; i < pages; i++) {
+            const dot = document.createElement('button');
+            dot.type = 'button';
+            dot.className = 'carousel-dot' + (i === reviewsPage ? ' active' : '');
+            dot.setAttribute('aria-label', translate('carousel_go_slide') + ' ' + (i + 1));
+            dot.addEventListener('click', (function(idx) {
+                return function() { goTo(idx); };
+            })(i));
+            dots.appendChild(dot);
+        }
+        wrap.appendChild(dots);
+
+        var startX = 0;
+        trackContainer.addEventListener('touchstart', function(e) {
+            startX = e.changedTouches[0].clientX;
+        }, { passive: true });
+        trackContainer.addEventListener('touchend', function(e) {
+            var dx = e.changedTouches[0].clientX - startX;
+            if (dx > 50) goTo(reviewsPage - 1);
+            else if (dx < -50) goTo(reviewsPage + 1);
+        }, { passive: true });
+    }
+
+    list.appendChild(wrap);
+    updateReviewsCarousel();
+}
+
+function createReviewCard(review) {
+    const card = document.createElement('article');
+    card.className = 'review-card visible';
+
+    if (review.id && isReviewAdmin()) {
+        const del = document.createElement('button');
+        del.type = 'button';
+        del.className = 'review-delete';
+        del.setAttribute('aria-label', translate('admin_delete'));
+        del.textContent = '×';
+        del.addEventListener('click', function() {
+            deleteReview(review.id);
+        });
+        card.appendChild(del);
+    }
+
+    const quote = document.createElement('p');
+    quote.className = 'review-quote';
+    quote.textContent = review.text || '';
+    card.appendChild(quote);
+
+    const photos = Array.isArray(review.photos) ? review.photos : [];
+    if (photos.length) {
+        const media = document.createElement('div');
+        media.className = 'review-card-media';
+        photos.forEach(function(src) {
+            const btn = document.createElement('button');
+            btn.type = 'button';
+            btn.className = 'review-thumb';
+            const img = document.createElement('img');
+            img.src = src;
+            img.alt = '';
+            btn.appendChild(img);
+            btn.addEventListener('click', function() { openReviewLightbox(src); });
+            media.appendChild(btn);
+        });
+        card.appendChild(media);
+    }
+
+    const meta = document.createElement('p');
+    meta.className = 'review-meta';
+    const author = document.createElement('span');
+    author.className = 'review-author';
+    author.textContent = review.name || '';
+    meta.appendChild(author);
+    const details = [review.place, formatReviewDate(review.date)].filter(Boolean).join(' · ');
+    if (details) {
+        const detail = document.createElement('span');
+        detail.className = 'review-details';
+        detail.textContent = details;
+        meta.appendChild(detail);
+    }
+    card.appendChild(meta);
+    return card;
+}
+
+function initReviewLightbox() {
+    const box = document.getElementById('reviewLightbox');
+    const closeBtn = document.getElementById('reviewLightboxClose');
+    if (!box) return;
+
+    if (closeBtn) closeBtn.addEventListener('click', closeReviewLightbox);
+    box.addEventListener('click', function(e) {
+        if (e.target === box) closeReviewLightbox();
+    });
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && !box.hidden) closeReviewLightbox();
+    });
+}
+
+function openReviewLightbox(src) {
+    const box = document.getElementById('reviewLightbox');
+    const inner = document.getElementById('reviewLightboxInner');
+    if (!box || !inner) return;
+    inner.innerHTML = '';
+    const img = document.createElement('img');
+    img.src = src;
+    img.alt = '';
+    inner.appendChild(img);
+    box.hidden = false;
+    document.body.style.overflow = 'hidden';
+}
+
+function closeReviewLightbox() {
+    const box = document.getElementById('reviewLightbox');
+    const inner = document.getElementById('reviewLightboxInner');
+    if (inner) inner.innerHTML = '';
+    if (box) box.hidden = true;
+    const navLinks = document.querySelector('.nav-links');
+    document.body.style.overflow = navLinks && navLinks.classList.contains('active') ? 'hidden' : '';
+}
+
+function isImageFile(file) {
+    if (file.type && file.type.indexOf('image/') === 0) return true;
+    return /\.(jpe?g|png|webp|gif)$/i.test(file.name);
+}
+
+function compressImage(file) {
+    return new Promise(function(resolve) {
+        if (file.type === 'image/gif') {
+            resolve(file);
+            return;
+        }
+        const img = new Image();
+        const url = URL.createObjectURL(file);
+        img.onload = function() {
+            const maxW = 1600;
+            const scale = Math.min(1, maxW / img.width);
+            const canvas = document.createElement('canvas');
+            canvas.width = Math.max(1, Math.round(img.width * scale));
+            canvas.height = Math.max(1, Math.round(img.height * scale));
+            const ctx = canvas.getContext('2d');
+            ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+            canvas.toBlob(function(blob) {
+                URL.revokeObjectURL(url);
+                if (!blob) {
+                    resolve(file);
+                    return;
+                }
+                const name = file.name.replace(/\.\w+$/, '.jpg');
+                resolve(new File([blob], name, { type: 'image/jpeg' }));
+            }, 'image/jpeg', 0.82);
+        };
+        img.onerror = function() {
+            URL.revokeObjectURL(url);
+            resolve(file);
+        };
+        img.src = url;
+    });
+}
+
+function clearReviewFiles() {
+    reviewFiles.forEach(function(item) {
+        if (item.previewUrl) URL.revokeObjectURL(item.previewUrl);
+    });
+    reviewFiles = [];
+    renderReviewFileList();
+}
+
+function renderReviewFileList() {
+    const list = document.getElementById('reviewFileList');
+    if (!list) return;
+    list.innerHTML = '';
+    reviewFiles.forEach(function(item, index) {
+        const li = document.createElement('li');
+        li.className = 'review-file-item';
+        const img = document.createElement('img');
+        img.src = item.previewUrl;
+        img.alt = item.file.name;
+        li.appendChild(img);
+        const name = document.createElement('span');
+        name.className = 'review-file-name';
+        name.textContent = item.file.name;
+        li.appendChild(name);
+        const remove = document.createElement('button');
+        remove.type = 'button';
+        remove.className = 'review-file-remove';
+        remove.setAttribute('aria-label', translate('reviews_remove_file'));
+        remove.textContent = '×';
+        remove.addEventListener('click', function() {
+            if (item.previewUrl) URL.revokeObjectURL(item.previewUrl);
+            reviewFiles.splice(index, 1);
+            renderReviewFileList();
+        });
+        li.appendChild(remove);
+        list.appendChild(li);
+    });
+}
+
+function setReviewStatus(key, isError) {
+    const statusEl = document.getElementById('reviewStatus');
+    if (!statusEl) return;
+    statusEl.dataset.statusKey = key || '';
+    statusEl.textContent = key ? translate(key) : '';
+    statusEl.classList.toggle('is-error', !!isError);
+    statusEl.classList.toggle('is-success', !!key && !isError);
+}
+
+function addReviewFiles(fileList) {
+    const incoming = Array.prototype.slice.call(fileList || []);
+    let photoCount = reviewFiles.length;
+
+    incoming.forEach(function(file) {
+        if (!isImageFile(file)) {
+            setReviewStatus('reviews_invalid_type', true);
+            return;
+        }
+        if (file.size > REVIEW_MAX_PHOTO_BYTES) {
+            setReviewStatus('reviews_file_too_big', true);
+            return;
+        }
+        if (photoCount >= REVIEW_MAX_PHOTOS) {
+            setReviewStatus('reviews_too_many_photos', true);
+            return;
+        }
+        photoCount += 1;
+        compressImage(file).then(function(compressed) {
+            reviewFiles.push({
+                file: compressed,
+                previewUrl: URL.createObjectURL(compressed)
+            });
+            renderReviewFileList();
+        });
+    });
+}
+
+function photoExtension(file) {
+    const fromName = (file.name.split('.').pop() || '').toLowerCase();
+    if (fromName === 'png' || fromName === 'webp' || fromName === 'gif' || fromName === 'jpg' || fromName === 'jpeg') {
+        return fromName === 'jpeg' ? 'jpg' : fromName;
+    }
+    if (file.type === 'image/png') return 'png';
+    if (file.type === 'image/webp') return 'webp';
+    if (file.type === 'image/gif') return 'gif';
+    return 'jpg';
+}
+
+function uploadReviewPhotos(client) {
+    return reviewFiles.reduce(function(chain, item, index) {
+        return chain.then(function(urls) {
+            const ext = photoExtension(item.file);
+            const path = Date.now() + '-' + Math.random().toString(36).slice(2, 10) + '-' + index + '.' + ext;
+            return client.storage
+                .from(REVIEW_PHOTOS_BUCKET)
+                .upload(path, item.file, {
+                    contentType: item.file.type || 'image/jpeg',
+                    upsert: false
+                })
+                .then(function(result) {
+                    if (result.error) throw result.error;
+                    const publicUrl = client.storage.from(REVIEW_PHOTOS_BUCKET).getPublicUrl(path);
+                    urls.push(publicUrl.data.publicUrl);
+                    return urls;
+                });
+        });
+    }, Promise.resolve([]));
+}
+
+function initReviewForm() {
+    const form = document.getElementById('reviewForm');
+    const fileInput = document.getElementById('reviewFiles');
+    const dropzone = document.getElementById('reviewDropzone');
+    const submitBtn = document.getElementById('reviewSubmit');
+    if (!form) return;
+
+    if (dropzone && fileInput) {
+        dropzone.addEventListener('click', function() { fileInput.click(); });
+        ['dragenter', 'dragover'].forEach(function(evt) {
+            dropzone.addEventListener(evt, function(e) {
+                e.preventDefault();
+                dropzone.classList.add('is-dragover');
+            });
+        });
+        ['dragleave', 'drop'].forEach(function(evt) {
+            dropzone.addEventListener(evt, function(e) {
+                e.preventDefault();
+                dropzone.classList.remove('is-dragover');
+            });
+        });
+        dropzone.addEventListener('drop', function(e) {
+            addReviewFiles(e.dataTransfer.files);
+        });
+    }
+
+    if (fileInput) {
+        fileInput.addEventListener('change', function() {
+            addReviewFiles(fileInput.files);
+            fileInput.value = '';
+        });
+    }
+
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const honeypot = form.querySelector('[name="website"]');
+        if (honeypot && honeypot.value) return;
+
+        const name = (document.getElementById('reviewName').value || '').trim();
+        const place = (document.getElementById('reviewPlace').value || '').trim();
+        const message = (document.getElementById('reviewMessage').value || '').trim();
+        if (!name || !message) {
+            setReviewStatus('reviews_error', true);
+            return;
+        }
+
+        const client = getSupabaseClient();
+        if (!client) {
+            setReviewStatus('reviews_error', true);
+            return;
+        }
+
+        if (submitBtn) {
+            submitBtn.disabled = true;
+            submitBtn.textContent = translate('reviews_sending');
+        }
+        setReviewStatus('');
+
+        uploadReviewPhotos(client)
+            .then(function(photoUrls) {
+                return client.from('reviews').insert({
+                    name: name,
+                    place: place || null,
+                    message: message,
+                    photos: photoUrls,
+                    approved: true
+                }).select('name, place, message, photos, created_at');
+            })
+            .then(function(result) {
+                if (!result || result.error || !result.data || !result.data.length) {
+                    throw (result && result.error) || new Error('insert failed');
+                }
+                form.reset();
+                clearReviewFiles();
+                setReviewStatus('reviews_success', false);
+                loadPublishedReviews();
+            })
+            .catch(function() {
+                setReviewStatus('reviews_error', true);
+            })
+            .finally(function() {
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = translate('reviews_submit');
+                }
+            });
+    });
+}
+
+const ADMIN_SESSION_KEY = 'pianoforte_admin_pw';
+
+function getAdminPassword() {
+    try {
+        return sessionStorage.getItem(ADMIN_SESSION_KEY) || '';
+    } catch (e) {
+        return '';
+    }
+}
+
+function isReviewAdmin() {
+    return !!getAdminPassword();
+}
+
+function setAdminPassword(password) {
+    try {
+        if (password) sessionStorage.setItem(ADMIN_SESSION_KEY, password);
+        else sessionStorage.removeItem(ADMIN_SESSION_KEY);
+    } catch (e) {}
+}
+
+function updateAdminUI() {
+    const loggedIn = isReviewAdmin();
+    document.body.classList.toggle('review-admin', loggedIn);
+    const loginForm = document.getElementById('adminLoginForm');
+    const sessionEl = document.getElementById('adminSession');
+    if (loginForm) loginForm.hidden = loggedIn;
+    if (sessionEl) sessionEl.hidden = !loggedIn;
+    const statusEl = document.getElementById('adminStatus');
+    if (statusEl && !loggedIn && statusEl.dataset.statusKey) {
+        statusEl.textContent = translate(statusEl.dataset.statusKey);
+    }
+}
+
+function initReviewAdmin() {
+    const form = document.getElementById('adminLoginForm');
+    const logoutBtn = document.getElementById('adminLogout');
+    const passwordInput = document.getElementById('adminPassword');
+    const statusEl = document.getElementById('adminStatus');
+    updateAdminUI();
+
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const password = (passwordInput && passwordInput.value) || '';
+            const client = getSupabaseClient();
+            if (!client || !password) {
+                if (statusEl) {
+                    statusEl.dataset.statusKey = 'admin_error';
+                    statusEl.textContent = translate('admin_error');
+                }
+                return;
+            }
+            client.rpc('verify_review_admin', { admin_password: password })
+                .then(function(result) {
+                    if (result.error || result.data !== true) {
+                        throw new Error('unauthorized');
+                    }
+                    setAdminPassword(password);
+                    if (passwordInput) passwordInput.value = '';
+                    if (statusEl) {
+                        statusEl.dataset.statusKey = '';
+                        statusEl.textContent = '';
+                    }
+                    updateAdminUI();
+                    renderReviews(publishedReviews);
+                })
+                .catch(function() {
+                    setAdminPassword('');
+                    updateAdminUI();
+                    if (statusEl) {
+                        statusEl.dataset.statusKey = 'admin_error';
+                        statusEl.textContent = translate('admin_error');
+                    }
+                });
+        });
+    }
+
+    if (logoutBtn) {
+        logoutBtn.addEventListener('click', function() {
+            setAdminPassword('');
+            if (statusEl) {
+                statusEl.dataset.statusKey = '';
+                statusEl.textContent = '';
+            }
+            updateAdminUI();
+            renderReviews(publishedReviews);
+        });
+    }
+}
+
+function deleteReview(reviewId) {
+    if (!reviewId || !isReviewAdmin()) return;
+    if (!window.confirm(translate('admin_delete_confirm'))) return;
+    const client = getSupabaseClient();
+    if (!client) return;
+    client.rpc('delete_review', {
+        review_id: reviewId,
+        admin_password: getAdminPassword()
+    }).then(function(result) {
+        if (result.error) throw result.error;
+        loadPublishedReviews();
+    }).catch(function() {});
 }
