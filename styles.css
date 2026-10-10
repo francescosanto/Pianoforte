@@ -1434,10 +1434,15 @@ button {
     font-style: italic;
     letter-spacing: 0.06em;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
 
-.review-more:hover {
-    color: var(--color-white-soft);
+.review-more:hover,
+.review-more:focus,
+.review-more:focus-visible,
+.review-more:active {
+    color: var(--color-gold);
+    outline: none;
 }
 
 @media (max-width: 768px) {

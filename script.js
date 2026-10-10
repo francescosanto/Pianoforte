@@ -1141,6 +1141,7 @@ function addReviewMoreButton(quote) {
         const expanded = quote.classList.toggle('is-expanded');
         btn.textContent = expanded ? translate('reviews_less') : translate('reviews_more');
         btn.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+        btn.blur();
         if (!expanded) {
             requestAnimationFrame(updateReviewQuoteToggles);
         }
