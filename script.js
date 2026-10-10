@@ -80,6 +80,8 @@ const TRANSLATIONS = {
         reviews_invalid_type: 'Formato no válido. Usa fotos JPG, PNG o WEBP.',
         reviews_remove_file: 'Quitar',
         reviews_lightbox_close: 'Cerrar',
+        reviews_more: 'más...',
+        reviews_less: 'menos',
         admin_label: 'Admin',
         admin_password_ph: 'Contraseña',
         admin_login: 'Entrar',
@@ -174,6 +176,8 @@ const TRANSLATIONS = {
         reviews_invalid_type: 'Invalid format. Use JPG, PNG or WEBP photos.',
         reviews_remove_file: 'Remove',
         reviews_lightbox_close: 'Close',
+        reviews_more: 'more...',
+        reviews_less: 'less',
         admin_label: 'Admin',
         admin_password_ph: 'Password',
         admin_login: 'Log in',
@@ -268,6 +272,8 @@ const TRANSLATIONS = {
         reviews_invalid_type: 'Formato non valido. Usa foto JPG, PNG o WEBP.',
         reviews_remove_file: 'Rimuovi',
         reviews_lightbox_close: 'Chiudi',
+        reviews_more: 'altro...',
+        reviews_less: 'meno',
         admin_label: 'Admin',
         admin_password_ph: 'Password',
         admin_login: 'Accedi',
@@ -905,6 +911,14 @@ function initReviews() {
     initReviewForm();
     initReviewLightbox();
     initReviewAdmin();
+    if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(updateReviewQuoteToggles);
+    }
+    var resizeTimer = 0;
+    window.addEventListener('resize', function() {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(updateReviewQuoteToggles, 120);
+    });
 }
 
 function loadPublishedReviews() {
@@ -1050,6 +1064,9 @@ function renderReviews(reviews) {
 
     list.appendChild(wrap);
     updateReviewsCarousel();
+    requestAnimationFrame(function() {
+        requestAnimationFrame(updateReviewQuoteToggles);
+    });
 }
 
 function createReviewCard(review) {
@@ -1106,6 +1123,62 @@ function createReviewCard(review) {
     }
     card.appendChild(meta);
     return card;
+}
+
+function isReviewsMobile() {
+    return window.matchMedia('(max-width: 768px)').matches;
+}
+
+function addReviewMoreButton(quote) {
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'review-more';
+    btn.setAttribute('aria-expanded', 'false');
+    btn.textContent = translate('reviews_more');
+    btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        const expanded = quote.classList.toggle('is-expanded');
+        btn.textContent = expanded ? translate('reviews_less') : translate('reviews_more');
+        btn.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+        if (!expanded) {
+            requestAnimationFrame(updateReviewQuoteToggles);
+        }
+    });
+    quote.insertAdjacentElement('afterend', btn);
+    return btn;
+}
+
+function updateReviewQuoteToggles() {
+    document.querySelectorAll('.review-quote').forEach(function(quote) {
+        const card = quote.closest('.review-card');
+        if (!card) return;
+        let btn = card.querySelector('.review-more');
+
+        if (!isReviewsMobile()) {
+            quote.classList.remove('is-expanded');
+            if (btn) btn.classList.remove('is-visible');
+            return;
+        }
+
+        if (quote.classList.contains('is-expanded')) {
+            if (!btn) btn = addReviewMoreButton(quote);
+            btn.classList.add('is-visible');
+            btn.textContent = translate('reviews_less');
+            btn.setAttribute('aria-expanded', 'true');
+            return;
+        }
+
+        const overflowing = quote.scrollHeight > quote.clientHeight + 2;
+        if (overflowing) {
+            if (!btn) btn = addReviewMoreButton(quote);
+            btn.classList.add('is-visible');
+            btn.textContent = translate('reviews_more');
+            btn.setAttribute('aria-expanded', 'false');
+        } else if (btn) {
+            btn.classList.remove('is-visible');
+        }
+    });
 }
 
 function initReviewLightbox() {

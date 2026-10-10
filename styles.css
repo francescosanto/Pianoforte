@@ -1413,17 +1413,53 @@ button {
     font-weight: 400;
     line-height: 1.65;
     color: var(--color-white-soft);
-    display: -webkit-box;
-    -webkit-line-clamp: 5;
-    line-clamp: 5;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
 }
 
 .review-quote::before {
     content: '“';
     color: var(--color-gold);
     margin-right: 2px;
+}
+
+.review-more {
+    display: none;
+    align-self: flex-start;
+    margin-top: -4px;
+    padding: 0;
+    background: none;
+    border: none;
+    color: var(--color-gold);
+    font-family: var(--font-sans);
+    font-size: 0.78rem;
+    font-style: italic;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+}
+
+.review-more:hover {
+    color: var(--color-white-soft);
+}
+
+@media (max-width: 768px) {
+    .review-quote {
+        font-size: 1rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        line-clamp: 5;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .review-quote.is-expanded {
+        display: block;
+        -webkit-line-clamp: unset;
+        line-clamp: unset;
+        overflow: visible;
+    }
+
+    .review-more.is-visible {
+        display: inline-block;
+    }
 }
 
 .review-card-media {
